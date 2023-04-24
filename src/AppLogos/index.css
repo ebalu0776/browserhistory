@@ -1,0 +1,22 @@
+.logos-container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.paragraph {
+  font-size: 20px;
+  color: orange;
+}
+
+.app-logo {
+  width: 50px;
+}
+
+.delete-logo {
+  width: 50px;
+}
+
+.span-elements {
+  color: black;
+}
