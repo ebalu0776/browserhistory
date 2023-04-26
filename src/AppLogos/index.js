@@ -1,7 +1,7 @@
 import './index.css'
 
 const AppLogos = props => {
-  const {historyDetails} = props
+  const {historyDetails, deleteItem} = props
   const {timeAccessed, logoUrl, title, domainUrl, id} = historyDetails
   const onDelete = () => {
     deleteItem(id)
@@ -10,11 +10,11 @@ const AppLogos = props => {
     <div>
       <li className="logos-container">
         <p className="paragraph">{timeAccessed}</p>
-        <img src={logoUrl} alt="logo url" className="app-logo" />
+        <img src={logoUrl} alt="domain logo" className="app-logo" />
         <p className="paragraph">
-          {title} <span className="span-elements">{domainUrl}</span>
+          {title} <p className="span-elements">{domainUrl}</p>
         </p>
-        <button type="button" onClick={onDelete}>
+        <button data-testid="delete" type="button" onClick={onDelete}>
           <img
             src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
             alt="delete"
